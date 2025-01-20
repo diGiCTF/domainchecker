@@ -19,6 +19,9 @@ A Python script to check the availability of `.com` domains for all alphanumeric
 3. If the `whois` output contains "No match for domain", the domain is deemed available and written to the output file.
 4. A progress bar updates in real-time, showing the progress of checks and statistics.
 
+## Note
+Before purchasing a short domain, research its history. Some may have high spam ratings, making them better to avoid.
+
 ## Prerequisites
 
 - Python 3.x
