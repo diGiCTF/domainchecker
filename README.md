@@ -11,6 +11,7 @@ A Python script to check the availability of `.com` domains for all alphanumeric
   - Total domains checked
   - Number of available domains found
 - **Output File**: Saves available domains to `domaincheck.txt`.
+- You can change the .com extension to other extensions i.e. .co, .net, .org etc
 
 ## How It Works
 
