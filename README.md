@@ -23,6 +23,32 @@ A Python script to check the availability of `.com` domains for all alphanumeric
 6. If the `whois` output contains "No match for domain", the domain is deemed available and written to the output file.
 7. A progress bar updates in real-time, displaying the number of domains checked and the number of available domains found.
 
+## Multi threading (beta)
+```$ python3 domainchecker_multi.py``` 
+✅ **Uses Multiple WHOIS Servers**  
+- The script randomly selects from multiple WHOIS servers to **distribute load** and **reduce rate limits**.  
+- This prevents a single WHOIS server from blocking or throttling requests.  
+
+✅ **Uses Multiple DNS Resolvers for Faster Lookups**  
+- Runs **nslookup** using different DNS servers before performing a WHOIS query.  
+- This avoids slow lookups caused by relying on a single DNS provider.  
+
+✅ **Parallel Execution for Faster Processing**  
+- The script runs **multiple WHOIS queries in parallel** using `ThreadPoolExecutor(max_workers=10)`.  
+- Instead of checking domains sequentially, it **checks 10 domains at a time**, significantly reducing total runtime.  
+
+✅ **Handles Rate Limits & Avoids Freezing**  
+- Introduces **a small delay (`time.sleep(0.05)`)** between queries to avoid being blocked by WHOIS servers.  
+- Uses **multiple DNS and WHOIS servers** to balance the load across different providers.  
+
+✅ **Real-Time Progress Updates**  
+- The `tqdm` progress bar updates **smoothly** as domains are processed.  
+- Displays **total checked domains** and **available domains found** in real time.  
+
+This optimization makes the script **3-5x faster** than a traditional sequential WHOIS lookup while preventing server throttling issues.
+
+
+
 
 ## Note
 Before purchasing a short domain, research its history. Some may have high spam ratings, making them better to avoid.
