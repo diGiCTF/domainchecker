@@ -13,12 +13,16 @@ A Python script to check the availability of `.com` domains for all alphanumeric
 - **Output File**: Saves available domains to `domaincheck.txt`.
 - You can change the .com extension to other extensions i.e. .co, .net, .org etc
 
-## How It Works
+## How It Works (Version 2 - released 2/14/2025) 
 
-1. The script generates all possible domain names with lengths ranging from a minimum to a maximum value using `itertools.product`.
-2. For each domain, it runs the `whois` command to check its availability.
-3. If the `whois` output contains "No match for domain", the domain is deemed available and written to the output file.
-4. A progress bar updates in real-time, showing the progress of checks and statistics.
+1. The script prompts the user for the domain extension to check (e.g., `.com`, `.ai`). If the user enters `ai` or `.ai`, it ensures the extension starts with a dot.
+2. The script asks for the minimum and maximum length of domain names to generate. If left blank, defaults are used (`1` for minimum and `3` for maximum).
+3. The script prompts the user for a custom character set to generate domain names. If no input is provided, it defaults to `"abcdefghijklmnopqrstuvwxyz0123456789"`.
+4. Using `itertools.product`, the script generates all possible domain names within the specified length range using the chosen character set.
+5. Each generated domain is checked for availability using the `whois` command.
+6. If the `whois` output contains "No match for domain", the domain is deemed available and written to the output file.
+7. A progress bar updates in real-time, displaying the number of domains checked and the number of available domains found.
+
 
 ## Note
 Before purchasing a short domain, research its history. Some may have high spam ratings, making them better to avoid.
