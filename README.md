@@ -40,4 +40,4 @@ Before purchasing a short domain, research its history. Some may have high spam 
    ```bash
    git clone https://github.com/diGiCTF/domainchecker.git
    cd domainchecker
-   python3 domainchecker.py```
+   python3 domainchecker.py
