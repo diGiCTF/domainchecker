@@ -38,5 +38,5 @@ Before purchasing a short domain, research its history. Some may have high spam 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/diGiCTF/domain-availability-checker.git
+   git clone [https://github.com/diGiCTF/domain-availability-checker.git](https://github.com/diGiCTF/domainchecker.git)
    cd domain-availability-checker
