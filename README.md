@@ -2,6 +2,19 @@
 
 A Python script to check the availability of `.com` domains for all alphanumeric combinations within a specified range of character lengths. This script uses the `whois` command to query domain availability and saves the results for domains that are available (not registered) to an output file. It also features a progress bar with real-time statistics.
 
+## New bulk domain checker
+Create a bulk list to check
+Create a file domainchecker_import.txt and list all the domains there
+```
+$ python3 domainchecker_bulk.py
+Checking domains: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:01<00:00,  2.70it/s, available=1, checked=4]
+Domain check completed. Total checked: 4, Available: 1.
+Available domains:
+Iwonderifthisisavailablexxx.com
+Results saved to domaincheck_results.txt.
+```
+
+
 ## Features
 
 - **Customizable Character Range**: Check domain names from a minimum to a maximum character length (default: 9–12 characters).
