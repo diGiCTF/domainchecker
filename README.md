@@ -42,4 +42,5 @@ Ensure you have the following installed before running any of the scripts:
 ## Usage
 Run any script with:
 ```bash
-python script_name.py
+python domainchecker.py
+```
